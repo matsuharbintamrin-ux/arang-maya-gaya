@@ -186,10 +186,12 @@ export const Flipbook = ({ className }: FlipbookProps) => {
           </div>
 
           {/* Page 2 - Visi Misi */}
-          <div className="page bg-white shadow-2xl p-10">
-            <h1 className="text-4xl font-bold mb-8 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">VISI DAN MISI</h1>
+          <div className="page w-full h-screen bg-white shadow-2xl p-10 flex flex-col">
+            <h1 className="text-4xl font-bold mb-8 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">
+              VISI DAN MISI
+            </h1>
 
-            <div className="mt-8 space-y-8">
+            <div className="mt-8 space-y-8 flex-1 flex flex-col justify-center">
               <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border-2 border-green-200">
                 <h2 className="text-2xl font-bold text-green-700 mb-4">💡 VISI</h2>
                 <p className="text-lg text-gray-700 leading-relaxed">
@@ -217,6 +219,7 @@ export const Flipbook = ({ className }: FlipbookProps) => {
             </div>
           </div>
 
+
           {/* Page 3 - Pabrik Kami */}
           <div className="page bg-white shadow-2xl p-10">
             <h1 className="text-5xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">PABRIK KAMI</h1>
@@ -236,23 +239,23 @@ export const Flipbook = ({ className }: FlipbookProps) => {
                   Setiap proses produksi kami dilakukan dengan standar tinggi dan menjaga mutu, efisiensi, serta ramah lingkungan.
                 </p>
 
-                <div className="grid grid-cols-2 gap-4 mt-6">
-                  <div className="bg-gradient-to-br from-green-50 to-green-100 p-5 rounded-xl border-2 border-green-200 shadow-md">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-gradient-to-br from-green-50 to-green-100 p-2 rounded-xl border-2 border-green-200 shadow-md">
                     <div className="text-4xl mb-2">⚡</div>
                     <h3 className="font-bold text-gray-800 mb-1 text-lg">Peralatan Terkini</h3>
                     <p className="text-sm text-gray-600">Peralatan produksi terkini</p>
                   </div>
-                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-5 rounded-xl border-2 border-blue-200 shadow-md">
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-2 rounded-xl border-2 border-blue-200 shadow-md">
                     <div className="text-4xl mb-2">🌱</div>
                     <h3 className="font-bold text-gray-800 mb-1 text-lg">Ramah Lingkungan</h3>
                     <p className="text-sm text-gray-600">Proses berkelanjutan</p>
                   </div>
-                  <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-5 rounded-xl border-2 border-orange-200 shadow-md">
+                  <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-2 rounded-xl border-2 border-orange-200 shadow-md">
                     <div className="text-4xl mb-2">🏆</div>
                     <h3 className="font-bold text-gray-800 mb-1 text-lg">Standar Tinggi</h3>
                     <p className="text-sm text-gray-600">Kualitas terjamin</p>
                   </div>
-                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-5 rounded-xl border-2 border-purple-200 shadow-md">
+                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-2 rounded-xl border-2 border-purple-200 shadow-md">
                     <div className="text-4xl mb-2">👷</div>
                     <h3 className="font-bold text-gray-800 mb-1 text-lg">Tim Profesional</h3>
                     <p className="text-sm text-gray-600">Tenaga ahli berpengalaman</p>
@@ -288,11 +291,11 @@ export const Flipbook = ({ className }: FlipbookProps) => {
                   Kami menggunakan teknologi modern dalam setiap tahap produksi untuk menghasilkan arang batok kelapa berkualitas premium.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-4 py-2 bg-green-500 text-white rounded-full text-sm font-bold shadow-md">Seleksi Bahan</span>
-                  <span className="px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-bold shadow-md">Pembakaran</span>
-                  <span className="px-4 py-2 bg-orange-500 text-white rounded-full text-sm font-bold shadow-md">Pendinginan</span>
-                  <span className="px-4 py-2 bg-purple-500 text-white rounded-full text-sm font-bold shadow-md">Quality Control</span>
-                  <span className="px-4 py-2 bg-pink-500 text-white rounded-full text-sm font-bold shadow-md">Packaging</span>
+                  <span className="px-4 py-1 bg-green-500 text-white rounded-full text-sm font-bold shadow-md">Seleksi Bahan</span>
+                  <span className="px-4 py-1 bg-blue-500 text-white rounded-full text-sm font-bold shadow-md">Pembakaran</span>
+                  <span className="px-4 py-1 bg-orange-500 text-white rounded-full text-sm font-bold shadow-md">Pendinginan</span>
+                  <span className="px-4 py-1 bg-purple-500 text-white rounded-full text-sm font-bold shadow-md">Quality Control</span>
+                  <span className="px-4 py-1 bg-pink-500 text-white rounded-full text-sm font-bold shadow-md">Packaging</span>
                 </div>
               </div>
             </div>
@@ -315,22 +318,22 @@ export const Flipbook = ({ className }: FlipbookProps) => {
               </p>
 
               <div className="space-y-5 max-w-2xl">
-                <div className="bg-gradient-to-r from-green-500 to-green-600 p-6 rounded-xl text-white shadow-xl transform hover:scale-105 transition-transform">
+                <div className="bg-gradient-to-r from-green-500 to-green-600 p-2 rounded-xl text-white shadow-xl transform hover:scale-105 transition-transform">
                   <h3 className="font-bold text-2xl mb-2">🏆 Kualitas Premium</h3>
                   <p className="text-green-50 text-lg">Arang dengan tingkat karbon tinggi dan daya bakar optimal untuk berbagai kebutuhan industri dan rumah tangga.</p>
                 </div>
 
-                <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-6 rounded-xl text-white shadow-xl transform hover:scale-105 transition-transform">
+                <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-2 rounded-xl text-white shadow-xl transform hover:scale-105 transition-transform">
                   <h3 className="font-bold text-2xl mb-2">🌍 Ramah Lingkungan</h3>
                   <p className="text-blue-50 text-lg">Diproduksi dengan metode berkelanjutan dan bahan baku terbarukan untuk menjaga kelestarian alam.</p>
                 </div>
 
-                <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-6 rounded-xl text-white shadow-xl transform hover:scale-105 transition-transform">
+                <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-2 rounded-xl text-white shadow-xl transform hover:scale-105 transition-transform">
                   <h3 className="font-bold text-2xl mb-2">📦 Kemasan Profesional</h3>
                   <p className="text-orange-50 text-lg">Tersedia dalam berbagai ukuran kemasan sesuai kebutuhan, dari retail hingga industrial scale.</p>
                 </div>
 
-                <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-6 rounded-xl text-white shadow-xl transform hover:scale-105 transition-transform">
+                <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-2 rounded-xl text-white shadow-xl transform hover:scale-105 transition-transform">
                   <h3 className="font-bold text-2xl mb-2">🚚 Pengiriman Terpercaya</h3>
                   <p className="text-purple-50 text-lg">Jaringan distribusi luas ke seluruh Indonesia dan ekspor internasional dengan layanan tepat waktu.</p>
                 </div>
@@ -454,9 +457,10 @@ export const Flipbook = ({ className }: FlipbookProps) => {
       </div>
 
       {/* Bottom Toolbar */}
-      <div className="absolute bottom-0 left-0 right-0 bg-accent/95 backdrop-blur-sm border-t border-border">
+      <div className="absolute bottom-0 left-0 right-0 bg-transparent backdrop-blur-sm border-t border-white/10">
         <div className="container mx-auto px-4 py-1">
           <div className="flex items-center justify-between">
+
             {/* Left Controls */}
             <div className="flex items-center gap-2">
               <Button variant="ghost" size="icon" className="text-foreground hover:bg-muted">
@@ -495,6 +499,7 @@ export const Flipbook = ({ className }: FlipbookProps) => {
                 <Maximize className="w-5 h-5" />
               </Button>
             </div>
+
           </div>
         </div>
       </div>
@@ -503,6 +508,7 @@ export const Flipbook = ({ className }: FlipbookProps) => {
       <div className="absolute bottom-20 right-1/2 transform translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-full text-sm opacity-0 hover:opacity-100 transition-opacity pointer-events-none">
         Click to view in fullscreen
       </div>
+
     </div>
   );
 };
