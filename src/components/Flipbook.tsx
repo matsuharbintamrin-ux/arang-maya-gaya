@@ -3,13 +3,17 @@ import HTMLFlipBook from "react-pageflip";
 import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Maximize, Grid3x3, Play, Volume2, Share2, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import charcoalHero from "@/assets/charcoal-hero.jpg";
-import factoryInterior from "@/assets/factory-interior.jpg";
+import charcoalHero from "@/assets/arang.jpg"
+import factoryInterior from "@/assets/factory1.png";
 import sustainability from "@/assets/sustainability.jpg";
-import productionProcess from "@/assets/production-process.jpg";
+import productionProcess from "@/assets/factory2.png";
 import certifications from "@/assets/certifications.jpg";
-import warehouse from "@/assets/warehouse.jpg";
+import warehouse from "@/assets/arang.jpg";
 import productShowcase from "@/assets/product-showcase.jpg";
+import logo from "@/assets/logo.png";
+import sertifikasi from "@/assets/sertifikasi.png";
+import sertifikasi2 from "@/assets/sertifikasi2.png";
+import kelapa from "@/assets/kelapa.jpg";
 
 interface FlipbookProps {
   className?: string;
@@ -38,7 +42,13 @@ export const Flipbook = ({ className }: FlipbookProps) => {
   };
 
   return (
-    <div className={cn("relative w-full h-screen bg-background overflow-hidden", className)}>
+    <div className={cn("relative w-full h-screen overflow-hidden", className)}>
+      {/* Background image */}
+      <img
+        src={kelapa}
+        alt="Sustainability"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
       {/* Navigation Arrows */}
       <Button
         onClick={goToPrevPage}
@@ -89,27 +99,38 @@ export const Flipbook = ({ className }: FlipbookProps) => {
         >
           {/* Cover Page */}
           <div className="page bg-white shadow-2xl relative overflow-hidden">
-            <img 
-              src={charcoalHero} 
-              alt="Premium Coconut Shell Charcoal" 
+            <img
+              src={charcoalHero}
+              alt="Premium Coconut Shell Charcoal"
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-green-600/90 to-green-800/90"></div>
+
+            {/* Gradient kiri gelap → kanan terang */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+
             <div className="h-full w-full flex items-center justify-center text-white relative z-10">
               <div className="text-center p-8">
                 <div className="mb-6">
                   <div className="w-32 h-32 mx-auto mb-6 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border-4 border-white/30">
-                    <span className="text-6xl">🔥</span>
+                    <img
+                      src={logo}
+                      alt="Logo"
+                      className="w-20 h-20 object-contain"
+                    />
                   </div>
-                  <h1 className="text-4xl font-bold mb-2 tracking-wide">CV SURYA GRISSE</h1>
+
+                  <h1 className="text-4xl font-bold mb-2 tracking-wide">SURYA GRISSE</h1>
                 </div>
+
                 <h2 className="text-6xl font-bold mb-4 tracking-tight">PABRIK ARANG</h2>
                 <h3 className="text-5xl font-bold mb-8 tracking-tight">BERKUALITAS</h3>
+
                 <div className="max-w-2xl mx-auto mb-8">
                   <p className="text-2xl opacity-95 leading-relaxed">
-                    Menghasilkan arang premium berkualitas ekspor dengan proses ramah lingkungan
+                    Menghasilkan arang premium berkualitas terbaik dengan proses ramah lingkungan
                   </p>
                 </div>
+
                 <div className="mt-12 text-lg opacity-80 animate-pulse">
                   Click to explore →
                 </div>
@@ -120,9 +141,9 @@ export const Flipbook = ({ className }: FlipbookProps) => {
           {/* Page 1 - Pengenalan */}
           <div className="page bg-white shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-1/2 h-full">
-              <img 
-                src={sustainability} 
-                alt="Sustainable Coconut Farm" 
+              <img
+                src={kelapa}
+                alt="Sustainable Coconut Farm"
                 className="w-full h-full object-cover opacity-30"
               />
             </div>
@@ -132,7 +153,7 @@ export const Flipbook = ({ className }: FlipbookProps) => {
                 <p className="text-xl text-gray-700 leading-relaxed font-medium">
                   <span className="font-bold text-green-600 text-2xl">CV Surya Grisse</span> adalah perusahaan produsen arang batok kelapa pertama di Indonesia yang mengedepankan kualitas terbaik dengan teknologi ramah lingkungan serta didukung pengalaman lebih dari 15 tahun di bidangnya.
                 </p>
-                
+
                 <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border-2 border-green-200 shadow-lg">
                   <h3 className="font-bold text-gray-800 mb-4 text-2xl">Mengapa Memilih Kami?</h3>
                   <ul className="space-y-3 text-gray-700 text-lg">
@@ -146,18 +167,18 @@ export const Flipbook = ({ className }: FlipbookProps) => {
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-green-500 font-bold text-2xl">✓</span>
-                      <span>Teknologi ramah lingkungan</span>
+                      <span>Ramah lingkungan</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-green-500 font-bold text-2xl">✓</span>
-                      <span>Standar produksi internasional</span>
+                      <span>Standar produksi Terbaik</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="mt-6 p-5 bg-gradient-to-r from-green-500 to-green-600 rounded-xl text-white shadow-lg">
                   <p className="text-center font-bold text-lg">
-                    Dipercaya oleh berbagai perusahaan besar di Indonesia dan internasional
+                    Dipercaya oleh berbagai perusahaan besar di Indonesia
                   </p>
                 </div>
               </div>
@@ -167,7 +188,7 @@ export const Flipbook = ({ className }: FlipbookProps) => {
           {/* Page 2 - Visi Misi */}
           <div className="page bg-white shadow-2xl p-10">
             <h1 className="text-4xl font-bold mb-8 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">VISI DAN MISI</h1>
-            
+
             <div className="mt-8 space-y-8">
               <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border-2 border-green-200">
                 <h2 className="text-2xl font-bold text-green-700 mb-4">💡 VISI</h2>
@@ -199,12 +220,12 @@ export const Flipbook = ({ className }: FlipbookProps) => {
           {/* Page 3 - Pabrik Kami */}
           <div className="page bg-white shadow-2xl p-10">
             <h1 className="text-5xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">PABRIK KAMI</h1>
-            
+
             <div className="mt-6 space-y-6">
               <div className="rounded-xl overflow-hidden shadow-2xl">
-                <img 
-                  src={factoryInterior} 
-                  alt="Factory Interior" 
+                <img
+                  src={factoryInterior}
+                  alt="Factory Interior"
                   className="w-full h-64 object-cover"
                 />
               </div>
@@ -212,13 +233,13 @@ export const Flipbook = ({ className }: FlipbookProps) => {
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold text-gray-800">Kualitas Arang Terbaik</h2>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Setiap proses produksi kami dilakukan dengan standar tinggi dan teknologi modern yang menjaga mutu, efisiensi, serta ramah lingkungan.
+                  Setiap proses produksi kami dilakukan dengan standar tinggi dan menjaga mutu, efisiensi, serta ramah lingkungan.
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 mt-6">
                   <div className="bg-gradient-to-br from-green-50 to-green-100 p-5 rounded-xl border-2 border-green-200 shadow-md">
                     <div className="text-4xl mb-2">⚡</div>
-                    <h3 className="font-bold text-gray-800 mb-1 text-lg">Teknologi Modern</h3>
+                    <h3 className="font-bold text-gray-800 mb-1 text-lg">Peralatan Terkini</h3>
                     <p className="text-sm text-gray-600">Peralatan produksi terkini</p>
                   </div>
                   <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-5 rounded-xl border-2 border-blue-200 shadow-md">
@@ -244,19 +265,19 @@ export const Flipbook = ({ className }: FlipbookProps) => {
           {/* Page 4 - Produksi */}
           <div className="page bg-white shadow-2xl p-10">
             <h1 className="text-5xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">PRODUKSI</h1>
-            
+
             <div className="mt-6 space-y-5">
               <div className="rounded-xl overflow-hidden shadow-2xl">
-                <img 
-                  src={productionProcess} 
-                  alt="Production Process" 
+                <img
+                  src={productionProcess}
+                  alt="Production Process"
                   className="w-full h-48 object-cover"
                 />
               </div>
               <div className="rounded-xl overflow-hidden shadow-2xl">
-                <img 
-                  src={warehouse} 
-                  alt="Warehouse Storage" 
+                <img
+                  src={warehouse}
+                  alt="Warehouse Storage"
                   className="w-full h-48 object-cover"
                 />
               </div>
@@ -280,15 +301,15 @@ export const Flipbook = ({ className }: FlipbookProps) => {
           {/* Page 5 - Keunggulan Produk */}
           <div className="page bg-white shadow-2xl relative overflow-hidden">
             <div className="absolute right-0 top-0 w-1/3 h-full opacity-20">
-              <img 
-                src={productShowcase} 
-                alt="Product Showcase" 
+              <img
+                src={productShowcase}
+                alt="Product Showcase"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="relative z-10 p-10">
               <h1 className="text-5xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">KEUNGGULAN PRODUK</h1>
-              
+
               <p className="text-xl text-gray-700 mb-8 leading-relaxed font-medium max-w-2xl">
                 Komitmen kami adalah menghadirkan produk arang berkualitas tinggi yang ramah lingkungan dan siap untuk berbagai kebutuhan industri maupun rumah tangga.
               </p>
@@ -320,54 +341,27 @@ export const Flipbook = ({ className }: FlipbookProps) => {
           {/* Page 6 - Sertifikasi */}
           <div className="page bg-white shadow-2xl p-10 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-yellow-100 to-transparent opacity-50"></div>
+
             <div className="relative z-10">
-              <h1 className="text-5xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">SERTIFIKASI</h1>
-              
-              <div className="mt-8 space-y-6">
-                <div className="text-center mb-10">
-                  <div className="inline-block bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 text-white px-10 py-5 rounded-2xl text-3xl font-bold shadow-2xl transform hover:scale-105 transition-transform">
-                    ⭐ CERTIFIED QUALITY ⭐
-                  </div>
-                </div>
+              <h1 className="text-5xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">
+                SERTIFIKASI
+              </h1>
 
-                <div className="rounded-xl overflow-hidden shadow-2xl mb-8">
-                  <img 
-                    src={certifications} 
-                    alt="Certifications" 
-                    className="w-full h-48 object-cover"
-                  />
-                </div>
+              {/* DUA GAMBAR SERTIFIKASI */}
+              <div className="mt-6 flex justify-center gap-6">
+                <img
+                  src={sertifikasi}
+                  alt="Sertifikasi 1"
+                  className="rounded-xl shadow-xl border"
+                  style={{ width: "273px", height: "511px", objectFit: "cover" }}
+                />
 
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="bg-gradient-to-br from-blue-100 to-blue-200 p-7 rounded-2xl border-3 border-blue-300 flex items-center justify-center h-36 shadow-xl">
-                    <div className="text-center">
-                      <div className="text-5xl mb-3">📜</div>
-                      <p className="font-bold text-gray-800 text-xl">ISO 9001</p>
-                    </div>
-                  </div>
-                  <div className="bg-gradient-to-br from-green-100 to-green-200 p-7 rounded-2xl border-3 border-green-300 flex items-center justify-center h-36 shadow-xl">
-                    <div className="text-center">
-                      <div className="text-5xl mb-3">🌿</div>
-                      <p className="font-bold text-gray-800 text-xl">ISO 14001</p>
-                    </div>
-                  </div>
-                  <div className="bg-gradient-to-br from-orange-100 to-orange-200 p-7 rounded-2xl border-3 border-orange-300 flex items-center justify-center h-36 shadow-xl">
-                    <div className="text-center">
-                      <div className="text-5xl mb-3">✅</div>
-                      <p className="font-bold text-gray-800 text-xl">HALAL</p>
-                    </div>
-                  </div>
-                  <div className="bg-gradient-to-br from-purple-100 to-purple-200 p-7 rounded-2xl border-3 border-purple-300 flex items-center justify-center h-36 shadow-xl">
-                    <div className="text-center">
-                      <div className="text-5xl mb-3">🏅</div>
-                      <p className="font-bold text-gray-800 text-xl">SNI</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-5 rounded-xl text-center mt-8 shadow-xl">
-                  <p className="font-bold text-xl">Terdaftar dan Tersertifikasi Internasional</p>
-                </div>
+                <img
+                  src={sertifikasi2}
+                  alt="Sertifikasi 2"
+                  className="rounded-xl shadow-xl border"
+                  style={{ width: "273px", height: "511px", objectFit: "cover" }}
+                />
               </div>
             </div>
           </div>
@@ -375,7 +369,7 @@ export const Flipbook = ({ className }: FlipbookProps) => {
           {/* Page 7 - Klien Kami */}
           <div className="page bg-white shadow-2xl p-10">
             <h1 className="text-4xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">KLIEN KAMI</h1>
-            
+
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
               Kami dipercaya oleh berbagai perusahaan besar dalam industri arang dan karbon untuk menyediakan produk berkualitas tinggi dan berkelanjutan.
             </p>
@@ -409,7 +403,7 @@ export const Flipbook = ({ className }: FlipbookProps) => {
           {/* Page 8 - Kontak */}
           <div className="page bg-white shadow-2xl p-10">
             <h1 className="text-4xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">HUBUNGI KAMI</h1>
-            
+
             <div className="mt-8 space-y-6">
               <div className="bg-gradient-to-br from-green-500 to-green-600 text-white p-8 rounded-xl text-center">
                 <h2 className="text-3xl font-bold mb-4">CV SURYA GRISSE</h2>
@@ -445,7 +439,7 @@ export const Flipbook = ({ className }: FlipbookProps) => {
                   <div className="text-3xl">📍</div>
                   <div>
                     <p className="font-bold text-gray-800">Lokasi</p>
-                    <p className="text-gray-600">Indonesia</p>
+                    <p className="text-gray-600">Raya Gosari Cangaan, Kelurahan Gosari, Kec. Ujungpangkah, Kab. Gresik.</p>
                   </div>
                 </div>
               </div>
@@ -461,7 +455,7 @@ export const Flipbook = ({ className }: FlipbookProps) => {
 
       {/* Bottom Toolbar */}
       <div className="absolute bottom-0 left-0 right-0 bg-accent/95 backdrop-blur-sm border-t border-border">
-        <div className="container mx-auto px-4 py-3">
+        <div className="container mx-auto px-4 py-1">
           <div className="flex items-center justify-between">
             {/* Left Controls */}
             <div className="flex items-center gap-2">
