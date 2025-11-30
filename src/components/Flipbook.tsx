@@ -399,7 +399,7 @@ export const Flipbook = ({ className }: FlipbookProps) => {
             </div>
 
             <div className="mt-8 bg-green-600 text-white p-4 rounded-lg text-center">
-              <p className="font-semibold">Trusted by Leading Companies Worldwide</p>
+              <p className="font-semibold">Di percaya oleh banyak perusahaan Indonesia</p>
             </div>
           </div>
 
